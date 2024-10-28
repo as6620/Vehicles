@@ -15,6 +15,15 @@ public class Cart extends Light{
     }
 
     @Override
+    public double exhaust() {
+        return 0;
+    }
+
+    public int hitchhikers(){
+        return (1);
+    }
+
+    @Override
     public String toString() {
         return "Cart{" +
                 "chargeTime=" + chargeTime +

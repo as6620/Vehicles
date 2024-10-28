@@ -1,5 +1,5 @@
 public class Light extends Vehicles{
-    boolean isEngine;
+    private boolean isEngine;
 
     public Light(int numCar, int ageCar, int quantityWheels, double pollutantEmissionsPerMinute, String steeringShape, boolean isEngine) {
         super(numCar, ageCar, quantityWheels, pollutantEmissionsPerMinute, steeringShape);

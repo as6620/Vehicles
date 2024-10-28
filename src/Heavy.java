@@ -15,6 +15,11 @@ public class Heavy extends Vehicles {
     }
 
     @Override
+    public double exhaust(){
+        return (super.exhaust() + 500 * countTrailers);
+    }
+
+    @Override
     public String toString() {
         return "Heavy{" +
                 "countTrailers=" + countTrailers +

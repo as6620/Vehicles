@@ -1,7 +1,7 @@
 public class Vehicles{
-    int numCar, ageCar, quantityWheels;
-    double pollutantEmissionsPerMinute;
-    String steeringShape;
+    private int numCar, ageCar, quantityWheels;
+    private double pollutantEmissionsPerMinute;
+    private String steeringShape;
 
     public Vehicles(int numCar, int ageCar, int quantityWheels, double pollutantEmissionsPerMinute, String steeringShape) {
         this.numCar = numCar;
@@ -49,5 +49,20 @@ public class Vehicles{
 
     public void setSteeringShape(String steeringShape) {
         this.steeringShape = steeringShape;
+    }
+
+    public double exhaust(){
+        return pollutantEmissionsPerMinute * 60;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicles{" +
+                "numCar=" + numCar +
+                ", ageCar=" + ageCar +
+                ", quantityWheels=" + quantityWheels +
+                ", pollutantEmissionsPerMinute=" + pollutantEmissionsPerMinute +
+                ", steeringShape='" + steeringShape + '\'' +
+                '}';
     }
 }

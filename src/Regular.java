@@ -1,5 +1,5 @@
 public class Regular extends Vehicles{
-    int numberOfPassengers;
+    private int numberOfPassengers;
 
     public Regular(int numCar, int ageCar, int quantityWheels, double pollutantEmissionsPerMinute, String steeringShape, int numberOfPassengers) {
         super(numCar, ageCar, quantityWheels, pollutantEmissionsPerMinute, steeringShape);
@@ -12,6 +12,19 @@ public class Regular extends Vehicles{
 
     public void setNumberOfPassengers(int numberOfPassengers) {
         this.numberOfPassengers = numberOfPassengers;
+    }
+
+    @Override
+    public double exhaust() {
+        return 100;
+    }
+
+    public void noise(){
+        System.out.println("loud noise!");
+    }
+
+    public int hitchhikers(){
+        return (4);
     }
 
     @Override

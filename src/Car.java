@@ -1,5 +1,5 @@
 public class Car extends Regular{
-    String color;
+    private String color;
 
     public Car(int numCar, int ageCar, int quantityWheels, double pollutantEmissionsPerMinute, String steeringShape, int numberOfPassengers, String color) {
         super(numCar, ageCar, quantityWheels, pollutantEmissionsPerMinute, steeringShape, numberOfPassengers);
