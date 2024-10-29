@@ -24,6 +24,12 @@ public class Main {
         }
         return(counter);
     }
-
-
+    public double ChargingTime(Vehicles[] vehicle){
+        int temp =0;
+        for(Vehicles v: vehicle){
+            if(((Cart) v).getChargeTime() > ((Cart) v+1).getChargeTime()){
+                return(v.getNumCar());
+            }
+        }
+    }
 }
