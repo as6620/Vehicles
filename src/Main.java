@@ -24,12 +24,39 @@ public class Main {
         }
         return(counter);
     }
+
     public double ChargingTime(Vehicles[] vehicle){
-        int temp =0;
+        int numCar;
+        double temp, maxCharge;
+
         for(Vehicles v: vehicle){
-            if(((Cart) v).getChargeTime() > ((Cart) v+1).getChargeTime()){
-                return(v.getNumCar());
+            if(v instanceof Cart){
+                maxCharge = ((Cart) v).getChargeTime();
+                if(temp < maxCharge){
+                    temp = maxCharge;
+                    numCar = v.getNumCar();
+                }
             }
         }
+        return(numCar);
     }
+
+    public int getVehicleWithMaxChargingTime(Vehicles[] vehicles) {
+        int numCarWithMaxCharge;
+        double maxChargeTime = 0;
+
+        for (Vehicles v : vehicles) {
+            if (v instanceof Cart) {
+                Cart cart = (Cart) v;
+                double chargeTime = cart.getChargeTime();
+
+                if (chargeTime > maxChargeTime) {
+                    maxChargeTime = chargeTime;
+                    numCarWithMaxCharge = cart.getNumCar();
+                }
+            }
+        }
+        return numCarWithMaxCharge;
+    }
+
 }
