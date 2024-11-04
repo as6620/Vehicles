@@ -1,0 +1,128 @@
+@startuml
+class Vehicles {
+- int numCar
+- double pollutantEmissionsPerMinute
+- String steeringShape
++ int getNumCar()
++ void setNumCar(int)
++ int getAgeCar()
++ void setAgeCar(int)
++ int getQuantityWheels()
++ void setQuantityWheels(int)
++ double getPollutantEmissionsPerMinute()
++ void setPollutantEmissionsPerMinute(double)
++ String getSteeringShape()
++ void setSteeringShape(String)
++ double exhaust()
++ String toString()
+}
+
+
+class Main {
++ double pollutants(Vehicles[])
++ void intensityNoise(Vehicles[])
++ int numPassengers(Vehicles[])
++ double ChargingTime(Vehicles[])
++ int getVehicleWithMaxChargingTime(Vehicles[])
+}
+
+class Heavy {
+- int countTrailers
++ int getCountTrailers()
++ void setCountTrailers(int)
++ double exhaust()
++ String toString()
+}
+
+
+class Truck {
+- double maxLoadingWeight
++ double getMaxLoadingWeight()
++ void setMaxLoadingWeight(double)
++ double exhaust()
++ String toString()
+}
+
+
+class Cart {
+- double chargeTime
++ double getChargeTime()
++ void setChargeTime(double)
++ double exhaust()
++ int hitchhikers()
++ String toString()
+}
+
+
+class Bus {
+- int numStopButtons
++ int getNumStopButtons()
++ void setNumStopButtons(int)
++ String toString()
+}
+
+
+class Light {
+- boolean isEngine
++ boolean isEngine()
++ void setEngine(boolean)
++ String toString()
+}
+
+
+class Regular {
+- int numberOfPassengers
++ int getNumberOfPassengers()
++ void setNumberOfPassengers(int)
++ double exhaust()
++ void noise()
++ int hitchhikers()
++ String toString()
+}
+
+
+class Car {
+- String color
++ String getColor()
++ void setColor(String)
++ String toString()
+}
+
+
+class Bicycle {
+- boolean isBasket
++ boolean isBasket()
++ void setBasket(boolean)
++ String toString()
+}
+
+
+class Tractor {
+- String typesOfTrailers
++ String getTypesOfTrailers()
++ void setTypesOfTrailers(String)
++ String toString()
+}
+
+
+class Kibbutz {
+- Vehicles[] vehicle
+- int currentCars
++ void addCar(Vehicles)
++ Vehicles[] Age15AndSteeringShape()
++ int numCarAndLightVehiclesAndSteeringShape()
+}
+
+
+
+
+Vehicles <|-- Heavy
+Heavy <|-- Truck
+Light <|-- Cart
+Truck <|-- Bus
+Vehicles <|-- Light
+Vehicles <|-- Regular
+Regular <|-- Car
+Light <|-- Bicycle
+Heavy <|-- Tractor
+@enduml

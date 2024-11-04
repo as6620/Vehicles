@@ -1,0 +1,11 @@
+@startuml
+class Kibbutz {
+- Vehicles[] vehicle
+- int currentCars
++ void addCar(Vehicles)
++ Vehicles[] Age15AndSteeringShape()
++ int numCarAndLightVehiclesAndSteeringShape()
+}
+
+
+@enduml
